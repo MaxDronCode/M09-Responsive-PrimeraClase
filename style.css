@@ -1,4 +1,3 @@
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(7, 1fr); 
@@ -12,40 +11,87 @@
     "aside  article1 article2 article3 article3 article4 article5"
     "aside  article6 article7 article8 article8 article9 article10"
     "footer  footer footer footer footer footer footer";
+}
 
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: 
-        "header  header header header"
-        "aside  menu menu menu"
-        "aside  menu menu menu"
-        "aside  section1 section1 section1"
-        "aside  section1 section1 section1"
-        "aside  section2 section2 section2"
-        "aside  section2 section2 section2"
-        "aside  article1 article2 article3"
-        "aside  article1 article2 article3"
-        "aside  article4 article5 article6"
-        "aside  article4 article5 article6"
-        "aside  article7 article8 article9"
-        "aside  article7 article8 article9"
-        "aside article10 empty empty"
-        "footer  footer footer footer";
-    } 
-      
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+      "header  header header header"
+      "aside  menu menu menu"
+      "aside  menu menu menu"
+      "aside  section1 section1 section1"
+      "aside  section1 section1 section1"
+      "aside  section2 section2 section2"
+      "aside  section2 section2 section2"
+      "aside  article1 article2 article3"
+      "aside  article1 article2 article3"
+      "aside  article4 article5 article6"
+      "aside  article4 article5 article6"
+      "aside  article7 article8 article9"
+      "aside  article7 article8 article9"
+      "aside article10 empty empty"
+      "footer  footer footer footer";
+  }
+}
+aside {
+  background-color: lightgray;
+  min-height: 500px;
+}
+
+@media (max-width: 500px) {
+
+  aside{
+    height: 100px !important;
+  }
+  
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "header header"
+      "aside aside"
+      "menu menu"
+      "menu menu"
+      "section1 section1"
+      "section1 section1"
+      "section1 section1"
+      "section2 section2"
+      "section2 section2"
+      "article1 article2"
+      "article1 article2"
+      "article1 article2"
+      "article1 article2"
+      "article3 article4"
+      "article3 article4"
+      "article3 article4"
+      "article3 article4"
+      "article5 article6"
+      "article5 article6"
+      "article5 article6"
+      "article5 article6"
+      "article7 article8"
+      "article7 article8"
+      "article7 article8"
+      "article7 article8"
+      "article9 article10"
+      "article9 article10"
+      "article9 article10"
+      "article9 article10"
+      "footer footer";
+  }
 }
 
 header {
   background-color: lightblue;
   min-height: 50px;
 }
-aside {
-  background-color: lightgray;
-  min-height: 500px;
-}
+
+
+
 main {
   background-color: lightgreen;
 }
+
 footer {
   background-color: lightcoral;
   min-height: 30px;
